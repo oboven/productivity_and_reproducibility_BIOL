@@ -1,0 +1,17 @@
+---
+title: "Palmer Penguins"
+author: "Olivia Boven"
+date: "2023-09-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(palmerpenguins)
+library(tidyverse)
+
+write_csv(penguins, "./00_rawdata/penguins.csv")
+```
