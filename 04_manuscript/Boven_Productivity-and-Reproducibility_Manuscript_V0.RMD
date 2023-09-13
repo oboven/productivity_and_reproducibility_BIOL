@@ -1,5 +1,5 @@
 ---
-title: "Boven_Productivity-and-Reproducibility_Penguins-Manuscript_V0"
+title: "Reproducible Science with Palmer Penguins"
 author: "Olivia Boven"
 date: "2023-09-05"
 output: pdf_document
@@ -10,6 +10,10 @@ csl: apa.csl
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+#Introduction
+
+This short project focuses on the widely used 'palmerpenguins' package @horstPalmerArchipelagoPenguins2022 with the intention of making an entirely reproducible workflow.
 
 This is my manuscript, which would probably include sections such as Introduction, Methods, Results, Discussion, and Conclusion.
 
