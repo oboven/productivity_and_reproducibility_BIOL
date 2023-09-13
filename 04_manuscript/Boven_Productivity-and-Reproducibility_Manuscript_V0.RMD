@@ -16,14 +16,18 @@ knitr::opts_chunk$set(echo = TRUE)
 Introduction
 =============================================
 
-This short project focuses on the widely used *palmerpenguins* package [@horstPalmerArchipelagoPenguins2022] with the intention of making an entirely reproducible workflow. The penguins near Palmer Station, Antarctica, such as Adelie penguins (*Pygoscelis adeliae*) have been the focus of many studies []. Since the development of the *palmerpenguins* package, data on these penguins has been used in many coding examples. As such, it was chosen for this demonstration of reproducible research.
+This short project focuses on the widely used *palmerpenguins* package [@horstPalmerArchipelagoPenguins2022] with the intention of making an entirely reproducible workflow. The penguins near Palmer Station, Antarctica, such as Adelie penguins (*Pygoscelis adeliae*) have been the focus of many studies [@nardelliKrillAvailabilityAdjacent2021; @ciminoLongtermPatternsEcosystem2023]. Since the development of the *palmerpenguins* package, data on these penguins has been used in many coding examples. As such, it was chosen for this demonstration of reproducible research.
 
-#
+Methods
+=============================================
 
+Results 
+=============================================
 
-@ciminoLongtermPatternsEcosystem2023
+Discussion
+=============================================
 
-@nardelliKrillAvailabilityAdjacent2021
 
 References 
+=============================================
 
