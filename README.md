@@ -10,7 +10,7 @@ README last updated on 20230913 by Olivia Boven
 
 00_raw_data: contains raw output files and original, unmodified datasets 
 
-01_scripts: contains scripts required to run analysis
+01_scripts: contains scripts required to run analysis, split into the folders r_scripts and RMD_scripts depending on file type
 
 02_outdata: contains all outputs from analysis and modified datasets 
 
