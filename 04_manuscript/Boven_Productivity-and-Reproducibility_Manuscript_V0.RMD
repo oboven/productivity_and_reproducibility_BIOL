@@ -32,23 +32,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This short project focuses on the widely used *palmerpenguins* package [@horstPalmerArchipelagoPenguins2022] with the intention of making an entirely reproducible workflow. The penguins near Palmer Station, Antarctica, such as Adelie penguins (*Pygoscelis adeliae*) have been the focus of many studies [@nardelliKrillAvailabilityAdjacent2021; @ciminoLongtermPatternsEcosystem2023]. Since the development of the *palmerpenguins* package, data on these penguins has been used in many coding examples. As such, it was chosen for this demonstration of reproducible research.
+This short project focuses on the widely used *palmerpenguins* package [@horstPalmerArchipelagoPenguins2022] with the intention of making an entirely reproducible workflow. The penguins near Palmer Station, Antarctica, such as Adelie penguins (*Pygoscelis adeliae*) have been the focus of many studies [@nardelliKrillAvailabilityAdjacent2021; @ciminoLongtermPatternsEcosystem2023]. Since the development of the *palmerpenguins* package, data on these penguins has been used in many coding examples. As such, it was chosen for this demonstration of reproducible research. We will determine whether bill length and depth vary between species.
 
 # Methods
 
-# Results
+We plotted bill length against bill depth for each species in RStudio using ggplot to visually assess whether bill length and depth varied between species. 
 
 :::(#refs)
 :::
 
+
+# Results
+
+Our results indicate that bill length and depth does vary between species (Figure 1).
+
 # Discussion
+
+Bill length and depth varied between species, possibly because they are different species that have evolved independently, faced different selective pressures, and are optimized for non-identical niches. 
 
 # References
 
-# Tables
-
 # Figure captions
 
+Figure 1. Bill depth versus bill length for Adelie, Chinstrap, and Gentoo penguins.
+
 # Figures
+
+```{r}
+ggplot(data = penguins,               # Data
+       aes(x = bill_length_mm,        # Your X-value
+           y = bill_depth_mm,         # Your Y-value
+           col = species)) +          # Aesthetics
+  geom_point(size = 5, alpha = 0.8) + # Point
+  geom_smooth(method = "lm") +        # Linear regression
+  labs(title = "Relationship between bill length and depth\nfor different penguin species", # Title
+       x = "Bill length (mm)", # X-axis title
+       y = "Bill depth (mm)", # Y-axis title
+       col = "Species") +  # Colour data point by species (also creates legend)
+  theme_classic() + # Apply a clean theme
+  theme(title = element_text(size = 18, face = "bold"),
+      text = element_text(size = 16))
+```
 
 # Appendices
