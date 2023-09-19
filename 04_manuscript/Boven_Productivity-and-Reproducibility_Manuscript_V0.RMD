@@ -20,13 +20,14 @@ header-includes:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(palmerpenguins)
 ```
-
-# Title
-
 \newpage
 
 # Abstract
+
+Who doesn't like penguins? Here we look at bill length and depth to demonstrate reproducible science.
 
 \newpage
 
@@ -36,11 +37,7 @@ This short project focuses on the widely used *palmerpenguins* package [@horstPa
 
 # Methods
 
-We plotted bill length against bill depth for each species in RStudio using ggplot to visually assess whether bill length and depth varied between species. 
-
-:::(#refs)
-:::
-
+We plotted bill length against bill depth for each species in RStudio using *plot* to visually assess whether bill length and depth varied between species. 
 
 # Results
 
@@ -51,6 +48,8 @@ Our results indicate that bill length and depth does vary between species (Figur
 Bill length and depth varied between species, possibly because they are different species that have evolved independently, faced different selective pressures, and are optimized for non-identical niches. 
 
 # References
+:::{#refs}
+:::
 
 # Figure captions
 
@@ -58,20 +57,12 @@ Figure 1. Bill depth versus bill length for Adelie, Chinstrap, and Gentoo pengui
 
 # Figures
 
-```{r}
-ggplot(data = penguins,               # Data
-       aes(x = bill_length_mm,        # Your X-value
-           y = bill_depth_mm,         # Your Y-value
-           col = species)) +          # Aesthetics
-  geom_point(size = 5, alpha = 0.8) + # Point
-  geom_smooth(method = "lm") +        # Linear regression
-  labs(title = "Relationship between bill length and depth\nfor different penguin species", # Title
-       x = "Bill length (mm)", # X-axis title
-       y = "Bill depth (mm)", # Y-axis title
-       col = "Species") +  # Colour data point by species (also creates legend)
-  theme_classic() + # Apply a clean theme
-  theme(title = element_text(size = 18, face = "bold"),
-      text = element_text(size = 16))
+```{r, echo=FALSE, warnings=FALSE}
+colours <- data.frame (species  = c("Adelie", "Chinstrap", "Gentoo"),
+                       color = c("darkorange", "blue", "cyan2")
+)
+penguins_col <- merge(x=penguins, y=colours, by="species", all.x=TRUE)
+plot(penguins_col$bill_depth_mm, penguins_col$bill_length_mm, pch=16, col= penguins_col$color, xlab = "Bill depth (mm)", ylab = "Bill length (mm)")
 ```
 
-# Appendices
+Figure 1. 
