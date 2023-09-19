@@ -1,0 +1,156 @@
+---
+title: "Palmer penguins productivity and reproducibility preregistration"
+author: "Olivia Boven"
+date: "2023/09/19"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+# By default, the code chunks are hidden for brevity. Set the echo argument to TRUE for blocks you want to share the code in the output for. 
+knitr::opts_chunk$set(echo = F)
+```
+
+```{r packages and data }
+
+library(palmerpenguins)
+```
+
+## Study Information
+
+### 1.	Title 
+
+Palmer penguins productivity and reproducibility. 
+
+### 2.	Authorship
+
+Olivia Boven ^1^ 
+
+^1^ University of British Columbia Okanagan
+
+### 3. Description
+
+This study is intended to demonstrate a reproducible scientific workflow using the *palmerpenguins* dataset.
+
+### 4.	Hypotheses
+
+1. Bill length and depth will vary between penguin species.
+ 
+## Design Plan
+
+We will download the readily accessible *palmer penguins* dataset and create a scatterplot of bill length and bill depth color-coded by species. We will visually assess this plot to see if the three species overlap or not.
+
+### 5.	Study Type 
+
+- Observational Study - Data is collected from study subjects that are not randomly assigned to a treatment. This includes surveys, ñnatural experiments,î and regression discontinuity designs.
+
+### 6.	Blinding
+
+- No blinding is involved in this study.
+
+### 7.	Is there any additional blinding in this study?
+
+Not applicable. 
+
+### 8.	Study design
+
+We have three species with basic measurement taken (bill length, bill depth, mass, flipper length, sex, etc.).
+
+### 9.	Randomization
+
+Not applicable. 
+
+## Sampling Plan 
+
+We will be using the "penguins" dataset from the existing *palmerpenguins* package.
+
+### 10. Existing data
+
+- Registration following analysis of the data: As of the date of submission, you have accessed and analyzed some of the data relevant to the research plan. This includes preliminary analysis of variables, calculation of descriptive statistics, and observation of data distributions. Please see cos.io/prereg for more information. 
+
+### 11.	Explanation of existing data
+
+I have not taken any steps.
+
+### 12.	Data collection procedures
+
+This data was previously collected by Horst et al. (2020).
+
+### 13.	Sample size
+
+124 Gentoo penguins, 152 Adelie penguins, and 68 Chinstrap penguins. 
+
+### 14. Sample size rationale 
+
+This dataset was collected previously, so I could not choose the sample size. 
+
+### 15. Stopping rule 
+
+Not applicable. 
+
+## Variables 
+
+flipper length: millimeters
+bill length: millimeters
+bill depth: millimeters
+body mass: grams
+island: where the individual was found
+species: the species of an individual
+sex: the sex of an individual (male or female)
+year: the year of data collection
+
+### 16. Manipulated variables
+
+Not applicable. 
+
+### 17. Measured variables 
+
+flipper length: millimeters
+bill length: millimeters
+bill depth: millimeters
+body mass: grams
+island: where the individual was found
+species: the species of an individual
+sex: the sex of an individual (male or female)
+year: the year of data collection
+
+### 18. Indices 
+
+Not applicable.
+
+## Analysis Plan
+
+Make a scatter plot of bill length versus bill depth, then look at the scatter plot.
+
+### 19. Statistical models
+
+N/A.
+
+### 20. Transformations 
+
+Not applicable.
+
+### 21. Inference criteria 
+
+Not applicable.
+
+### 22. Data exclusion 
+
+Not applicable.
+
+### 23. Missing data
+
+Not applicable.
+
+### 24. Exploratory analysis
+
+Not applicable.
+
+## Other 
+
+### 25. Other 
+
+Not applicable. 
+
+## References 
+
+Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0 https://allisonhorst.github.io/palmerpenguins/. doi: 10.5281/zenodo.3960218
