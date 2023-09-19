@@ -1,8 +1,6 @@
 #This script plots bill length versus depth for the three species of the *palmerpenguins* dataset
 
 #install the below packages if they are not already installed 
-
-library(ggplot2)
 library(palmerpenguins)
 
 #create a dataframe indicating which colour each species should appear on the plot
@@ -17,5 +15,5 @@ penguins_col <- merge(x=penguins, y=colours, by="species", all.x=TRUE)
   
 #create a simple scatter plot, with species distinguished by colour
 
-plot(penguins_col$bill_depth_mm, penguins_col$bill_length_mm, pch=16, col= penguins_col$color, xlab = "Bill length (mm)", ylab = "Bill depth (mm)")
+plot(penguins_col$bill_depth_mm, penguins_col$bill_length_mm, pch=16, col= penguins_col$color, xlab = "Bill depth (mm)", ylab = "Bill length (mm)")
 
