@@ -10,11 +10,6 @@ output: pdf_document
 knitr::opts_chunk$set(echo = F)
 ```
 
-```{r packages and data }
-
-library(palmerpenguins)
-```
-
 ## Study Information
 
 ### 1.	Title 

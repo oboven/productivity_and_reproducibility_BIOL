@@ -1,21 +1,17 @@
 ---
 title: "Productivity and reproducbility"
-subtitle: "An example using *palmerpenguins*"
 author: "Olivia Boven"
 date: "2023-09-14"
-output: word_document
+output:
+  pdf_document: default
+  word_document: default
+subtitle: An example using *palmerpenguins*
 latex_engine: xelatex
 bibliography: references.bib
 csl: apa.csl
-geometry: margin=1in 
-header-includes:
-    -\usepackage{setspace}
-    -\doublespacing
-    -\usepackage{lineno}
-    -\linenumbers
-    -\usepackage{float}
-    -\usepackage{fontspec}
-    -\setmainfont{Times New Roman}
+geometry: margin=1in
+header-includes: "-\\usepackage{setspace} -\\doublespacing -\\usepackage{lineno} -\\linenumbers
+  -\\usepackage{float} -\\usepackage{fontspec} -\\setmainfont{Times New Roman}"
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +53,7 @@ Figure 1. Bill depth versus bill length for Adelie, Chinstrap, and Gentoo pengui
 
 # Figures
 
-```{r, echo=FALSE, warnings=FALSE}
+```{r, echo=FALSE, echo=FALSE, warnings=FALSE}
 colours <- data.frame (species  = c("Adelie", "Chinstrap", "Gentoo"),
                        color = c("darkorange", "blue", "cyan2")
 )
